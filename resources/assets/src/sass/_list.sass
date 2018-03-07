@@ -1,0 +1,89 @@
+.list
+  display: flex
+  flex-direction: column
+  align-items: center
+  counter-reset: myCounter
+
+  &__el
+    margin-bottom: 4px
+    width: 100%
+    +clr
+    &:before
+      counter-increment: myCounter
+      content: counter(myCounter) '.'
+      color: $darkGrey
+      display: inline-block
+      text-align: center
+      margin-right: 8px
+      float: left
+
+  &__link
+    display: inline
+    font-size: 14px
+    letter-spacing: 0
+    +tr(all .3s ease)
+
+  &.is-horizontal
+    flex-direction: row
+    list-style: none
+    padding-left: 0
+
+    .list
+
+      &__el
+        width: auto
+        &:before
+          display: none
+
+      &__link
+        font-size: 13px
+        +h100
+
+
+    +r(991)
+      flex-wrap: wrap
+
+    +r(568)
+      justify-content: center
+
+
+  &.is-grey
+    .list__link
+      color: $darkGrey
+
+      &:active, &:visited, &:focus
+        color: $darkGrey
+
+      &:hover
+        color: lighten($darkGrey, 30%)
+
+  &.is-part
+    .list__el
+      position: relative
+      padding: 0 7px
+      margin-bottom: 0
+
+      &:after
+        position: absolute
+        content: ''
+        right: 0
+        top: 5px
+        background-color: $lightGrey
+        width: 1px
+        height: 13px
+
+      &:last-child
+        &:after
+          display: none
+
+  &.is-small
+    margin-bottom: 32px
+
+    .list
+      &__el
+        margin-bottom: 2px
+        &:before
+          margin-right: 3px
+
+      &__link
+        font-size: 13px

@@ -1,0 +1,55 @@
+.product
+  margin-top: 30px
+  margin-bottom: 70px
+  display: flex
+  flex-direction: row
+
+  +r(991)
+    flex-wrap: wrap
+
+  +r(767)
+    margin-top: 15px
+
+  &__left
+    margin-right: 30px
+    +r(991)
+      width: 100%
+      margin-bottom: 30px
+
+  &__right
+    +r(991)
+      width: 100%
+
+  &__img-box
+    width: 285px
+    +r(991)
+      width: auto
+
+  &__table
+    position: relative
+    margin-bottom: 14px
+    top: -4px
+    width: 100%
+    line-height: 1.9
+    vertical-align: top
+    font-size: 13px
+
+
+    tr
+      border-bottom: 1px solid #ececec
+
+      &:last-child
+        border-bottom: none
+
+    td
+      height: 30px
+
+      &:first-child
+        padding-right: 16px
+        text-transform: uppercase
+        color: $lightGrey
+        +h100
+
+      &:last-child
+        color: $darkGrey
+        +h200

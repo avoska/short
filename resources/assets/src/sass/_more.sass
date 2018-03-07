@@ -1,0 +1,39 @@
+.more
+  position: relative
+  width: 274px
+  +h100
+
+  &__title
+    margin-bottom: 10px
+
+  &__link
+    color: $darkGrey
+    flex-direction: column
+    margin-bottom: 10px
+    line-height: 1.2
+
+    &:active,
+    &:focus,
+    &:visited
+      color: $darkGrey
+
+    span
+      &:first-child
+        +h200
+      &:last-child
+        +h100
+
+  &__link-blue
+    margin-top: 4px
+
+  &__table
+    line-height: 1.6
+
+    td
+      margin-bottom: 5px
+      +h100
+      &:first-child
+        width: 81%
+
+      &:last-child
+        font-size: 12px

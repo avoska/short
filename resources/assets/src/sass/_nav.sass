@@ -1,0 +1,46 @@
+.nav
+  position: relative
+  display: flex
+  text-transform: uppercase
+
+  +r(767)
+    display: none
+
+  &__el
+    position: relative
+
+    &:last-child
+      a
+        padding-right: 0
+
+    &:nth-child(2),
+    &:nth-child(3)
+      &:hover
+        background-color: #fff
+        border-radius: 4px 4px 0 0
+
+        .dropdown
+          display: flex
+
+        a
+          color: #4875e8
+
+          i:after
+            border-color: #4875e8 transparent transparent transparent
+  &__link
+    position: relative
+    padding: 13px 20px
+    color: #fff
+    font-size: 15px
+    cursor: pointer
+    +h400
+
+    &:focus,
+    &:visited,
+    &:active
+      color: #fff
+
+    &:hover
+      color: #4875e8
+      i:after
+        border-color: #4875e8 transparent transparent transparent

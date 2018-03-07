@@ -1,0 +1,52 @@
+.breadcrumb
+  padding: 15px 0
+  margin-bottom: 40px
+  width: 100%
+  display: flex
+  align-items: center
+  border-bottom: 1px solid #ececec
+  box-sizing: border-box
+
+  +r(767)
+    margin-bottom: 15px
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+  &__el
+    position: relative
+    padding-right: 32px
+    &:after,
+    &:before
+      position: absolute
+      content: ''
+      width: 1px
+      height: 6px
+      background-color: $darkGrey
+
+    &:after
+      right: 16px
+      top: 5px
+      transform: rotate(-45deg)
+
+    &:before
+      right: 16px
+      bottom: 5px
+      transform: rotate(45deg)
+
+    &:last-child
+      padding-left: 0
+
+      &:after,
+      &:before
+        display: none
+
+    &:last-child
+      a
+        color: $darkGrey
+        pointer-events: none
+
+  &__link
+    font-size: 13px
+    +h200

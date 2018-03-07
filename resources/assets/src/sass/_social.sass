@@ -1,0 +1,54 @@
+.social
+  &__list
+    display: inline-flex
+
+  &__el
+    display: inline-flex
+    margin: 0 4px
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+
+  &__link
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 30px
+    height: 30px
+    box-sizing: border-box
+    border-radius: 4px
+    cursor: pointer
+    margin-left: 10px
+
+    &.is-twitter
+      background-color: #56b2e8
+
+      &:hover
+        background-color: #60c0f7
+
+    &.is-facebook
+      background-color: #5d75ca
+
+      &:hover
+        background-color: #6880d9
+
+    &.is-google
+      background-color: #f86153
+
+      &:hover
+        background-color: #ff6e61
+
+.social-links
+  display: flex
+  justify-content: flex-start
+  align-items: center
+
+.social-likes
+  display: flex
+  justify-content: flex-start
+  align-items: center
+
+  &__widget
+    display: inline-flex
+    margin: 0 4px

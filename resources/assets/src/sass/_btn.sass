@@ -1,0 +1,153 @@
+.btn
+  position: relative
+  display: flex
+  align-items: center
+  padding: 0 10px
+  margin: 0
+  height: 30px
+  line-height: 27px
+  color: $darkGrey
+  border: 1px solid $grey
+  border-radius: 4px
+  background: transparent
+  cursor: pointer
+  box-sizing: border-box
+  +h200
+
+  &:active
+    color: $darkGrey
+    outline: none
+
+  &:hover
+    color: $darkGrey
+    outline: none
+
+  &:focus
+    outline: 0
+
+  &:visited
+    color: $darkGrey
+    outline: none
+
+  &.is-big
+    height: 100%
+    padding: 0 50px
+    text-transform: uppercase
+    color: #fff
+    font-size: 16px
+    border: none
+    +g(#98e039, #70be38)
+    +h400
+    &:hover
+      +g(#81d222,#81d222)
+
+  &.is-search
+    display: inline-block
+    height: 54px
+    border-radius: 0 4px 4px 0
+
+    +r(768)
+      width: 100%
+      justify-content: center
+      border-radius: 4px
+
+
+    &.is-mobile
+      padding: 0
+      width: 100%
+      height: 42px
+      border-radius: 4px
+      font-size: 15px
+
+  &.is-blue
+    height: 32px
+    line-height: 32px
+    background-color: #548af0
+    border-color: #548af0
+    justify-content: center
+    font-size: 14px
+
+    &:hover
+      background-color: darken(#548af0, 20%)
+
+  &.is-bold
+    color: #fff
+    +h400
+
+  &.is-with-ico
+    padding: 0
+    display: inline-flex
+    flex-direction: row
+    align-items: center
+    font-size: 22px
+    text-transform: uppercase
+    color: #fff
+    border: none
+    height: 62px
+    +h400
+
+    .btn
+
+      &__left,
+      &__right
+        display: inline-flex
+        align-items: center
+        height: 100%
+        +tr(all .3s ease)
+
+
+      &__left
+        width: 62px
+        background-color: #55b800
+
+        i
+          margin: auto
+
+
+      &__right
+        padding: 0 42px
+        background-color: #6aca06
+
+    &:hover
+
+      .btn
+
+        &__left
+          background-color: #70c700
+
+        &__right
+          background-color: #81d222
+
+  &.is-dropdown
+    border: none
+    justify-content: center
+    font-size: 13px
+    letter-spacing: .3px
+
+    .ico
+      top: 2px
+      left: 5px
+
+
+.btn
+
+  &-fb,
+  &-tw,
+  &-google
+    display: inline-block
+    height: 20px
+    margin-right: 5px
+    background: transparent 0 0 no-repeat
+    cursor: pointer
+
+  &-fb
+    width: 49px
+    background-image: url('../img/fb-btn.png')
+
+  &-tw
+    width: 56px
+    background-image: url('../img/tw-btn.png')
+
+  &-google
+    width: 32px
+    background-image: url('../img/google-btn.png')

@@ -1,0 +1,28 @@
+{% extends 'layout/default' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-xs-offset-3">
+				<form method="POST" action="{{ route('new') }}">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<div class="form-group">
+						<h2 class="margin-top-20"> Введите ссылку </h2>
+						<input name="link" required type="text" class="is-full-width" id="url-input" placeholder="https://google.com">
+					</div>
+					<button type="submit" class="btn btn-success">Сократить ссылку</button>
+				</form>
+			</div>
+		</div>
+		<div class="row display-none">
+			<div class="col-xs-3 col-xs-offset-3">
+				<h3 class="url-short-share-lable"> Ссылка для шаринга </h3>
+				<input class="is-full-width" id="url-short-share">
+			</div>
+			<div class="col-xs-3">
+				<h3 class="url-short-statistic-lable"> Ссылка для статистики </h3>
+				<input class="is-full-width" id="url-short-statistic">
+			</div>
+		</div>
+	</div>
+{% endblock %}

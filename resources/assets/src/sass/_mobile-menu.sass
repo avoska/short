@@ -1,0 +1,62 @@
+.hamburger
+  display: none
+  margin-right: 25px
+  cursor: pointer
+
+  +r(767)
+    display: block
+
+  span
+    margin-bottom: 5px
+    display: flex
+    width: 25px
+    height: 3px
+    background-color: #fff
+
+    &:last-child
+      margin-bottom: 3px
+
+.mobile-menu
+  position: absolute
+  top: 0
+  left: -100%
+  width: 265px
+  height: 100%
+  background-color: #2a4996
+  z-index: 50
+  +tr(all .3s ease)
+
+  &.is-open
+    left: 0
+
+
+  &__top
+    padding: 22px 15px
+
+  &__list
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__el
+    width: 100%
+    background-color: #548af0
+
+    &:nth-child(odd)
+      background-color: #669afa
+
+  &__link
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 54px
+    text-transform: uppercase
+    color: #fff
+    font-size: 14px
+    +h400
+
+    &:active,
+    &:visited,
+    &:focus
+      color: #fff

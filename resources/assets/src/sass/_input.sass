@@ -1,0 +1,46 @@
+input[type=search]
+  -webkit-appearance: none
+
+.input
+  height: 32px
+  line-height: 32px
+  padding: 0 10px 0 27px
+  width: 100%
+  border: 1px solid #ddd
+  border-radius: 4px
+  font-size: 13px
+  color: $darkGrey
+
+  &::-webkit-input-placeholder
+    color: $darkGrey
+
+  &:-moz-placeholder
+    color: $darkGrey
+
+  &::-moz-placeholder
+    color: $darkGrey
+
+  &.is-big
+    padding: 0 10px 0 50px
+    height: 54px
+    line-height: 50px
+    border-color: transparent
+    font-size: 16px
+    border-radius: 4px 0 0 4px
+    +h200
+
+    +r(767)
+      border-radius: 4px
+
+  &.is-small
+    border: none
+    padding: 0 33px 0 11px
+
+  &.is-mobile
+    height: 42px
+    line-height: 42px
+    border-color: transparent
+    font-size: 14px
+
+  +r(768)
+    font-size: 11px

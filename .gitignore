@@ -1,0 +1,10 @@
+/vendor
+node_modules
+/public/storage
+.idea
+/test.php
+_ide_helper.php
+.phpstorm.meta.php
+.env
+.vagrant
+

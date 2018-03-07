@@ -1,0 +1,50 @@
+.result
+  margin: 0 0 8px
+
+  &__title
+    display: flex
+    align-items: center
+    margin: 13px 0 9px
+    padding: 0 6px
+    font-size: 1.2em
+    +h100
+    text-transform: uppercase
+    word-spacing: 1px
+
+    .ico
+      margin: 0 14px 0 0
+
+  &__links
+    +flex(flex, column, flex-start, flex-start)
+
+  &__link
+    margin: 0 0 5px
+    padding: 0 0 0 34px
+    font-size: 15px
+    +h200
+    +href($darkGrey, $blue, $darkGrey, $darkGrey)
+
+    &:hover
+      text-decoration: none
+      color: $blue
+
+  &__name
+    display: block
+    margin: 0 0 2px
+    font-size: 0.9em
+
+
+  &_short
+    margin-bottom: 16px
+
+    .result
+      &__title
+        margin-bottom: 7px
+
+      &__link
+        margin-bottom: 6px
+        padding: 0
+
+      &__name
+        margin-bottom: 0
+        font-size: .8em

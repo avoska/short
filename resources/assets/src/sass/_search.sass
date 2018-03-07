@@ -1,0 +1,57 @@
+.search
+  width: 100%
+  position: relative
+  display: flex
+  cursor: text
+  +r(767)
+    flex-wrap: wrap
+
+  &__field
+    width: 100%
+
+  &__action
+    text-align: center
+    +r(767)
+      margin-top: 10px
+      width: 100%
+
+  &.is-175
+    width: 175px
+
+  &.is-left-10
+    margin-left: 10px
+
+  &.wide-input
+    width: 60%
+
+  &.is-small
+    width: 0
+    +tr(all .3s ease)
+
+    input
+      padding: 0
+
+    .ico
+      +tr(all .3s ease)
+      right: -18px
+
+    &:hover
+      width: 225px
+
+      input
+        padding: 0 33px 0 11px
+
+      .ico
+        right: 7px
+        background-image: url(../img/ico-search-big.png)
+
+    +r(991)
+      display: none
+
+  &.is-mobile
+    flex-wrap: wrap
+
+    .search__action
+      width: 100%
+
+

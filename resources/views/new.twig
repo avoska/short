@@ -1,0 +1,16 @@
+{% extends 'layout/default' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row margin-top-20">
+			<div class="col-xs-3 col-xs-offset-3">
+				<h3 class="url-short-share-lable"> Ссылка для шаринга </h3>
+				<input class="is-full-width" id="url-short-share" type="text" value="{{ route('short', hash) }}">
+			</div>
+			<div class="col-xs-3">
+				<h3 class="url-short-statistic-lable"> Ссылка для статистики </h3>
+				<input class="is-full-width" id="url-short-statistic" type="text" value="{{ route('stats', hash) }}">
+			</div>
+		</div>
+	</div>
+{% endblock %}

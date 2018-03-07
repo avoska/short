@@ -1,0 +1,86 @@
+.dropdown
+  display: none
+  flex-direction: row
+  position: absolute
+  top: 50px
+  left: 0
+  width: 300px
+  min-width: 130px
+  background-color: #fff
+  cursor: pointer
+  z-index: 10
+  box-shadow: 0 15px 20px 1px rgba(0, 0, 0, 0.2)
+  
+  &.is-plain
+    width: auto
+
+  &__list
+    width: 50%
+    display: flex
+    flex-direction: column
+
+    &.is-full
+      width: 100%
+
+  &__link
+    display: flex
+    padding: 6px 18px
+    text-transform: none
+    color: $darkGrey!important
+    cursor: pointer
+
+    &:hover
+      color: #fff!important
+      background-color: #689bf9
+
+    &:active,
+    &:visited,
+    &:focus
+      color: $darkGrey
+
+  &.is-small
+    position: relative
+    width: 290px
+    background-color: #fff
+    padding: 15px
+    border-radius: 5px
+
+    &:after
+      position: absolute
+      right: 50%
+      top: 0
+      width: 0
+      height: 0
+      content: ''
+      border-left: 8px solid transparent
+      border-right: 8px solid transparent
+      border-bottom: 8px solid #fff
+
+    .table td
+      vertical-align: top
+
+  &.is-more
+    width: 290px
+    top: 35px
+    left: -7px
+    padding: 16px 20px
+    line-height: 1.4
+    border-radius: 4px
+    flex-direction: column
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.5)
+    box-sizing: border-box
+    cursor: default
+
+    &:after
+      position: absolute
+      right: 30%
+      top: -8px
+      width: 0
+      height: 0
+      content: ''
+      border-left: 8px solid transparent
+      border-right: 8px solid transparent
+      border-bottom: 8px solid #fff
+
+    &.is-visible
+      display: flex
