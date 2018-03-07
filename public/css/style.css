@@ -9,3 +9,12 @@
 .display-none {
 	display: none;
 }
+
+.stats-table > thead > tr > td {
+	background-color: grey;
+	border: 1px solid black;
+	padding: 20px!important;
+}.stats-table > tbody > tr > td {
+	 border: 1px solid black;
+	padding: 20px!important;
+}
