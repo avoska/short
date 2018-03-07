@@ -60,8 +60,6 @@ class MainController extends Controller {
 		$link = $this->getLinkByHash($hash);
 		$query = LinkStats::where('link_id', $link->id);
 
-
-
 		return view('stats', [
 			'statsByBrowser' => (clone $query)->select('user_browser', DB::raw("COUNT(*) as views"))->groupBy('user_browser')->get(),
 			'statsByOs' => (clone $query)->select('user_os', DB::raw("COUNT(*) as views"))->groupBy('user_os')->get(),
