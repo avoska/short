@@ -1,5 +1,30 @@
 {% extends 'layout/default' %}
 
 {% block body %}
+	<div class="container">
+	    <div class="row">
+	        <div class="col-xs-6 col-xs-offset-3">
+		        <table class="stats-table">
+		        		<thead>
+		        		<tr>
+		        			<td>User Browser</td>
+		        			<td>User OS</td>
+		        			<td>Views</td>
+		        			<td>Unique</td>
+		        		</tr>
+		        		</thead>
+		        		<tbody>
+		        		<tr>
+		        			<td>{{ statsByBrowser[0]['user_browser']}}</td>
+		        			<td>{{ statsByOs[0]['user_os'] }}</td>
+		        			<td>{{ views }}</td>
+		        			<td>{{ unique }}</td>
+		        		</tr>
+		        		</tbody>
+		        	</table>
+
+	        </div>
+	    </div>
+	</div>
 
 {% endblock %}
